@@ -1,0 +1,11 @@
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\bin\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.deps.json
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\bin\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.runtimeconfig.json
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\bin\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.runtimeconfig.dev.json
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\bin\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.dll
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\bin\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.pdb
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\obj\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.csprojAssemblyReference.cache
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\obj\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.csproj.CoreCompileInputs.cache
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\obj\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.AssemblyInfoInputs.cache
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\obj\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.AssemblyInfo.cs
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\obj\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.dll
+C:\Users\raikas\source\repos\UusiTekstinLukuJaKirjoitus\UusiTekstinLukuJaKirjoitus\obj\Debug\netcoreapp2.1\UusiTekstinLukuJaKirjoitus.pdb
