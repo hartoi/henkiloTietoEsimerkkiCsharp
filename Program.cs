@@ -34,7 +34,7 @@ namespace UusiTekstinLukuJaKirjoitus
                     break;
             }
             // Tämän koodin pitäis toimia kun luokka on valmis
-            Henkilo matti = new Henkilo("Matti");
+            Henkilo matti = new Henkilo("Matti","13");
 
         }
     }
