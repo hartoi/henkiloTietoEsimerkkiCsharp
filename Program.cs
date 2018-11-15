@@ -60,11 +60,21 @@ namespace UusiTekstinLukuJaKirjoitus
             // Lue data.txt ohjelman muistiin ja tulosta se konsoliin
             // Google-apu: C# read textfile 
             string[] lines = System.IO.File.ReadAllLines(@"C:\Users\raikas\Desktop\data.txt");
-          
-            for ( int i = 0; i < 4; i++)
+            Console.WriteLine("Tiedostossa on rivejä: " + lines.Length);
+            // Pistä toimimaan siten, että rivi määrä voi muuttua
+            for ( int i = 0; i < lines.Length; i++)// <- googlaa: how to find length of an array c#
             {
                 Console.WriteLine( lines[i] );
             }
+            //TEHTÄVÄ 2:
+            // Etsi miten c#:lla kirjoitetaan tiedostoon seuraavat
+            // tehtävä 1:
+            // tiedostoon yksiRiviEsimerkki.txt
+            string tämärivitiedostoon = "Pekka tykkää hillomunkeista";
+            // tehtävä 2:
+            // montaRiviäEsimerkki.txt
+            string[] nämärivittiedostoon = { "Pekka tykkää hillomunkeista", "Kalle baanaaneista" };
+
             /*
             //                         0                           1
             string[] lines2 = { "Moro Joulupukki,", "Tässä on pieni kirje sinulle",
@@ -80,7 +90,7 @@ namespace UusiTekstinLukuJaKirjoitus
             Console.WriteLine(lines[2]);
             Console.WriteLine(lines[3]);
             */
-            Console.WriteLine("Rivejä on "+lines.Length);
+
             // Tehtävä tulsota lines muuttuja sekä for:illa että foreach:lla
         }
     }
