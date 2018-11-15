@@ -2,6 +2,20 @@
 
 namespace UusiTekstinLukuJaKirjoitus
 {
+    class Henkilo
+    {
+        // olion ominaisuudet
+        public string nimi;
+        public string ikä;
+
+        // olion funktiot (eli metodit)
+        public Henkilo(string animi,string aikä) // Muodostin (constructor) funktio
+        {
+            nimi = animi;
+            ikä = aikä;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -19,6 +33,9 @@ namespace UusiTekstinLukuJaKirjoitus
                     Console.WriteLine("Valitsit toiminnon 1");
                     break;
             }
+            // Tämän koodin pitäis toimia kun luokka on valmis
+            Henkilo matti = new Henkilo("Matti");
+
         }
     }
 }
