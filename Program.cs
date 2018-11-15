@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace UusiTekstinLukuJaKirjoitus
 {
@@ -45,7 +46,7 @@ namespace UusiTekstinLukuJaKirjoitus
             Henkilo matti = new Henkilo("Matti", "13", "Ponit");
             Henkilo marleena = new Henkilo("Marleena", "30", "Ompelu");
             Henkilo sirpa = new Henkilo("Sirpa", "54", "Toimintaelokuvat");
-
+            /*
             Console.WriteLine(matti.nimi + " " + matti.ikä + " " + matti.harrastus);
 
             Console.WriteLine(marleena.nimi + " " + marleena.ikä + " " + marleena.harrastus);
@@ -53,6 +54,34 @@ namespace UusiTekstinLukuJaKirjoitus
             // Googlaa c# class methods examples
             marleena.esitteleItsesti();
             sirpa.esitteleItsesti();
+            */
+            // TEHTÄVÄ
+            // Etsi miten C#:lla luetaan tietoa tiedostosta
+            // Lue data.txt ohjelman muistiin ja tulosta se konsoliin
+            // Google-apu: C# read textfile 
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\raikas\Desktop\data.txt");
+          
+            for ( int i = 0; i < 4; i++)
+            {
+                Console.WriteLine( lines[i] );
+            }
+            /*
+            //                         0                           1
+            string[] lines2 = { "Moro Joulupukki,", "Tässä on pieni kirje sinulle",
+                //   2          3
+                "Terveisin", "Matti" };
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(lines2[i]);
+            }
+            /*
+            Console.WriteLine(lines[0]);
+            Console.WriteLine(lines[1]);
+            Console.WriteLine(lines[2]);
+            Console.WriteLine(lines[3]);
+            */
+            Console.WriteLine("Rivejä on "+lines.Length);
+            // Tehtävä tulsota lines muuttuja sekä for:illa että foreach:lla
         }
     }
 }
