@@ -22,6 +22,28 @@ namespace tekstinLukuJakirjoitus
     {
         static void Main(string[] args)
         {
+            // TEHTÄVÄ 1: luo kolme henkilöä harrastuksineen luokasta henkilo
+            Henkilo matti = new Henkilo("Matti","34","sienestys");
+            Henkilo teppo = new Henkilo("Teppo", "24", "metsästys");
+            Henkilo janina = new Henkilo("Janina", "20", "ompeleminen,BB");// jotain googlatkaa miten 
+            // TEHTÄVÄ 2
+            // luo kolmelle henkilölle taulukkomuuttuja, johon asetat ne
+            // esim intillä 
+            int[] lukuja = { 1, 2, 3, 4, 5 }; // intillä toimii näin
+            Henkilo[] henkilot = { matti, teppo, janina }; // jotain
+            //Console.WriteLine(henkilot[1].nimi); // <- pitäisi tulostaa "Teppo"
+            // TEHTÄVÄ 3
+            // Muuta seuraava loopiksi
+            for (int i = 0; i < henkilot.Length; i++)
+            {
+                henkilot[i].tulostaTyyppi();
+            }
+            // TEHTÄVÄ 4
+            // Lisää for-looppi switch/casen 1.kohtaan
+
+            // Kirjoita tiedot tiedostoon "C:\Users\raikas\Desktop\henkilodata.txt"
+            string rivi = henkilot[1].nimi + ";" + henkilot[1].ika + ";" + henkilot[1].harrastukset;
+            Console.WriteLine(rivi);
             while (true)
             {
                 Console.WriteLine("Valitse toiminto:");
