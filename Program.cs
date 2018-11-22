@@ -12,6 +12,10 @@ namespace tekstinLukuJakirjoitus
         {
             Console.WriteLine("Nimi:" + nimi + " ikä:" + ika + " harrastukset:" + harrastukset);
         }
+        public string tulostaTiedostoonFormaatti()
+        {
+            return nimi + ";" + ika + ";" + harrastukset+"\r\n";
+        }
         public Henkilo(string n = "", string i = "", string h = "")
         {
             nimi = n;
@@ -38,19 +42,14 @@ namespace tekstinLukuJakirjoitus
             //{ matti, teppo, janina }; // jotain
             // TEHTÄVÄ 3
             // Muuta seuraava loopiksi
-            for (int i = 0; i < henkilot.Count; i++)
-            {
-                henkilot[i].tulostaTyyppi();
-            }
+
             // TEHTÄVÄ 4
             // Lisää for-looppi switch/casen 1.kohtaan
 
             // TEHTÄVÄ 5
             // Kirjoita tiedot tiedostoon "C:\Users\raikas\Desktop\henkilodata.txt"
             // Googlaa c# write to file, katso eka esimerkki
-            string rivi = henkilot[1].nimi + ";" + henkilot[1].ika +
-                ";" + henkilot[1].harrastukset;
-            Console.WriteLine(rivi); // ei tulosteta consoleen, vaan tiedostoon
+           
             while (true)
             {
                 Console.WriteLine("Valitse toiminto:");
@@ -61,21 +60,38 @@ namespace tekstinLukuJakirjoitus
                 Console.WriteLine("5.Lopeta");
 
                 int valinta = int.Parse(Console.ReadLine());
-
                 switch (valinta)
                 {
                     case 1:
-                        Console.WriteLine("1.Valittu");
+                        for (int i = 0; i < henkilot.Count; i++)
+                        {
+                            henkilot[i].tulostaTyyppi();
+                        }
                         break;
                     case 2:
-                        Console.WriteLine("2.Valittu");
+                        // Otetaan tiedot ja lisätään henkilö listaan
+                        Console.WriteLine("Anna nimi");             // kysy nimi
+                        string nimi = Console.ReadLine();           // talleta nimi (matti.nimi <= käyttäjän syöte)
+                        Console.WriteLine("Anna ikä");              // Kysy ikä
+                        string ikä = Console.ReadLine();            // talleta ikä
+                        Console.WriteLine("Anna harrastukset");     // kysy harrastukset
+                        string harrastukset = Console.ReadLine();   // talleta harrastukset
+                        // Luo uusi henkilö
+                        Henkilo lisättävä = new Henkilo(nimi,ikä,harrastukset);
+                        // Lisää äsken luotu henkilö listaan henkilöt
+                        henkilot.Add(lisättävä);
                         break;
                     case 3:
                         Console.WriteLine("3.Valittu");
                         break;
                     case 4:
-                        Console.WriteLine("4.Valittu");
-
+                        string teksti = "";
+                        foreach( Henkilo data in henkilot)
+                        {
+                            teksti = teksti + data.tulostaTiedostoonFormaatti();
+                        }
+                        System.IO.File.WriteAllText(
+                            @"C:\Users\raikas\Desktop\henkilödata.txt", teksti);
                         break;
                     case 5:
                         System.Environment.Exit(1);
