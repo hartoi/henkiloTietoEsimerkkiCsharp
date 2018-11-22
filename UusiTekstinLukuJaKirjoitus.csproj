@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ProgramEnnenListaMuutosta.cs" />
+  </ItemGroup>
+
 </Project>
