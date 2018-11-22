@@ -28,15 +28,18 @@ namespace tekstinLukuJakirjoitus
         static void Main(string[] args)
         {
             // TEHTÄVÄ 1: luo kolme henkilöä harrastuksineen luokasta henkilo
+            /*
             Henkilo matti = new Henkilo("Matti", "34", "sienestys");
             Henkilo teppo = new Henkilo("Teppo", "24", "metsästys");
             Henkilo janina = new Henkilo("Janina", "20", "ompeleminen,BB");// jotain googlatkaa miten 
-                                                                           // muuta henkilot taulukkomuuttuja listaksi
+              */                                                             // muuta henkilot taulukkomuuttuja listaksi
             List<Henkilo> henkilot = new List<Henkilo>();// tässä uusi lista ja siihen matti,teppo,janina
+            /*
             henkilot.Add(matti);
             henkilot.Add(teppo);
             henkilot.Add(janina);
-            // TEHTÄVÄ 2
+    */        
+    // TEHTÄVÄ 2
             // luo kolmelle henkilölle taulukkomuuttuja, johon asetat ne
 
             //{ matti, teppo, janina }; // jotain
@@ -83,6 +86,24 @@ namespace tekstinLukuJakirjoitus
                         break;
                     case 3:
                         Console.WriteLine("3.Valittu");
+                        foreach (string line in System.IO.File.ReadLines(
+                            @"C:\Users\raikas\Desktop\henkilödata.txt"))
+                        {
+                            string rivi_nimi = line.Split(';')[0];
+                            string rivi_ikä = line.Split(';')[1];
+                            string rivi_harrastukset = line.Split(';')[2];
+                            Henkilo rivi_lisättävä = new Henkilo(rivi_nimi,
+                                rivi_ikä,rivi_harrastukset);
+                            // Lisää äsken luotu henkilö listaan henkilöt
+                            henkilot.Add(rivi_lisättävä);
+                            // luokaa näistä tiedoista uusi henkilö
+                        }
+
+                        // lue rivi tiedostosta henkilödata.txt
+                        // erottele tiedot split-komennolla
+                        // luo näistä tiedoista uusi henkilö
+                        // lisää henkilö listaan henkilöt
+                        // toista sama muille tiedoston riveille
                         break;
                     case 4:
                         string teksti = "";
